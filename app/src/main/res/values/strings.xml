@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Modules</string>
+    <string name="credit_item_content">Кредит %1$s ставкой от %2$s\%%</string>
+    <string name="product_item_content">Продукт %s</string>
+</resources>
