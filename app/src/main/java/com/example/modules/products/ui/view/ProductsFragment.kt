@@ -5,12 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.modules.App
 import com.example.modules.databinding.FragmentProductsListBinding
 import com.example.modules.products.ui.ProductUiModel
 import com.example.modules.products.ui.presenter.ProductsPresenter
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
+import org.koin.android.ext.android.get
 
 class ProductsFragment : MvpAppCompatFragment(), ProductsView {
 
@@ -19,9 +19,7 @@ class ProductsFragment : MvpAppCompatFragment(), ProductsView {
     }
 
     private var adapter: ProductsRecyclerViewAdapter? = null
-    private val presenter by moxyPresenter {
-        ProductsPresenter(App.INSTANCE.router)
-    }
+    private val presenter: ProductsPresenter by moxyPresenter { get() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

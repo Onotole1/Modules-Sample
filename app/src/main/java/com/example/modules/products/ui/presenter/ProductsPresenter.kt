@@ -1,14 +1,13 @@
 package com.example.modules.products.ui.presenter
 
-import com.example.modules.credits.navigation.CreditsScreens
-import com.example.modules.products.domain.OfferType
+import com.example.credits.core.domain.OfferType
+import com.example.credits.core.navigation.CreditsRouter
 import com.example.modules.products.ui.ProductUiModel
 import com.example.modules.products.ui.view.ProductsView
-import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 
 class ProductsPresenter(
-    private val router: Router,
+    private val creditsRouter: CreditsRouter,
 ) : MvpPresenter<ProductsView>() {
 
     override fun onFirstViewAttach() {
@@ -23,6 +22,6 @@ class ProductsPresenter(
     }
 
     fun onOfferClicked(offerType: OfferType) {
-        router.navigateTo(CreditsScreens.CreditsList(offerType))
+        creditsRouter.navigateToOffer(offerType)
     }
 }

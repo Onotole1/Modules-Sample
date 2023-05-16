@@ -3,18 +3,21 @@ package com.example.modules
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.modules.products.navigation.ProductsScreens
+import com.github.terrakok.cicerone.NavigatorHolder
+import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
+import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val navigator = AppNavigator(this, R.id.container)
-
-    private val navigatorHolder = App.INSTANCE.navigatorHolder
+    private val navigatorHolder: NavigatorHolder by inject()
+    private val router: Router by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState == null) {
-            App.INSTANCE.router.replaceScreen(ProductsScreens.ProductsList)
+            router.replaceScreen(ProductsScreens.ProductsList)
         }
     }
 

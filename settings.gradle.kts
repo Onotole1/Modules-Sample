@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "Modules"
 include(":app")
 include(":application")
+include(":credits-core")
+include(":credits")
