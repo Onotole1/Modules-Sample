@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.credits"
+    namespace = "com.example.products"
     compileSdk = 33
 
     defaultConfig {
@@ -42,6 +42,7 @@ dependencies {
     implementation("com.github.moxy-community:moxy-androidx:$moxyVersion")
     kapt("com.github.moxy-community:moxy-compiler:$moxyVersion")
     implementation("io.insert-koin:koin-android:3.4.0")
-    api(project("${parent!!.path}:credits-core"))
+    api(project("${parent!!.path}:products-core"))
+    implementation(project("${parent!!.path}:credits-core"))
     implementation(project("${parent!!.path}:app"))
 }

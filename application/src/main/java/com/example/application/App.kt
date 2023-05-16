@@ -2,7 +2,7 @@ package com.example.application
 
 import android.app.Application
 import com.example.credits.di.creditsModule
-import com.example.modules.products.di.productsModule
+import com.example.products.di.productsModule
 import com.github.terrakok.cicerone.Cicerone
 import org.koin.core.context.GlobalContext.startKoin
 import org.koin.core.module.dsl.factoryOf

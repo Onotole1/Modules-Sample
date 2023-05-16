@@ -1,15 +1,15 @@
-package com.example.modules.products.ui.view
+package com.example.products.ui.view
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.modules.R
-import com.example.modules.databinding.ItemProductBinding
-import com.example.modules.products.ui.ProductUiModel
+import com.example.products.R
+import com.example.products.databinding.ItemProductBinding
+import com.example.products.ui.ProductUiModel
 
-class ProductsRecyclerViewAdapter(
+internal class ProductsRecyclerViewAdapter(
     private val productClicked: (ProductUiModel) -> Unit,
 ) : ListAdapter<ProductUiModel, ProductsRecyclerViewAdapter.ProductViewHolder>(ProductDiffCallback()) {
 

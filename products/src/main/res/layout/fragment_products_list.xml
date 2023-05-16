@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
-    android:name="com.example.modules.products.ProductsFragment"
+    android:name="com.example.products.ui.view.ProductsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".products.ui.view.ProductsFragment"
+    tools:context=".ui.view.ProductsFragment"
     tools:listitem="@layout/item_product" />

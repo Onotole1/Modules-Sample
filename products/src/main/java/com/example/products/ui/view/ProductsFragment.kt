@@ -1,18 +1,18 @@
-package com.example.modules.products.ui.view
+package com.example.products.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
-import com.example.modules.databinding.FragmentProductsListBinding
-import com.example.modules.products.ui.ProductUiModel
-import com.example.modules.products.ui.presenter.ProductsPresenter
+import com.example.products.databinding.FragmentProductsListBinding
+import com.example.products.ui.ProductUiModel
+import com.example.products.ui.presenter.ProductsPresenter
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 import org.koin.android.ext.android.get
 
-class ProductsFragment : MvpAppCompatFragment(), ProductsView {
+internal class ProductsFragment : MvpAppCompatFragment(), ProductsView {
 
     companion object {
         fun newInstance() = ProductsFragment()

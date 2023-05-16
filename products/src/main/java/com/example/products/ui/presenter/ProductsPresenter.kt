@@ -1,12 +1,12 @@
-package com.example.modules.products.ui.presenter
+package com.example.products.ui.presenter
 
 import com.example.credits.core.domain.OfferType
 import com.example.credits.core.navigation.CreditsRouter
-import com.example.modules.products.ui.ProductUiModel
-import com.example.modules.products.ui.view.ProductsView
+import com.example.products.ui.ProductUiModel
+import com.example.products.ui.view.ProductsView
 import moxy.MvpPresenter
 
-class ProductsPresenter(
+internal class ProductsPresenter(
     private val creditsRouter: CreditsRouter,
 ) : MvpPresenter<ProductsView>() {
 

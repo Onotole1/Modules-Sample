@@ -1,8 +1,8 @@
-package com.example.modules.products.ui
+package com.example.products.ui
 
 import com.example.credits.core.domain.OfferType
 
-data class ProductUiModel(
+internal data class ProductUiModel(
     val id: Long,
     val name: String,
     val type: OfferType,

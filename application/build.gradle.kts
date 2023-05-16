@@ -38,4 +38,5 @@ dependencies {
     implementation("io.insert-koin:koin-android:3.4.0")
     implementation(project(":app"))
     implementation(project(":credits"))
+    implementation(project(":products"))
 }
